@@ -19,8 +19,12 @@ app.get('/', function(page, model, params, next) {
     , {text: 'Purple'}
     ])
     data.setNull('color', 'Purple')
-    page.render()
+    page.render('home')
   })
+})
+
+app.get('/another-page', function(page, model, params, next) {
+    page.render('another')
 })
 
 // The "init" and "create" events may be used to get access to
